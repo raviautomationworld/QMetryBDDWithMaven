@@ -1,0 +1,8 @@
+SCENARIO:  Login into Application
+META-DATA:  {"groups" : ["login"], "dataFile" : '${TestDataFile}' , "sheetName" : "login" , "key" : "Login_01"}
+	Given Naviagte to URL
+	When User click on myaccount
+	And User enter '${UserName}' and '${PassWord}'
+	And  User click on login button
+	Then Verify My Account Header is displayed
+END

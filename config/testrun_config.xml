@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd"> 
+<suite name="QAF Demo" verbose="0">
+	<test name="BDD Test" enabled="true">
+	    <parameter name="scenario.file.loc" value="scenarios/login.bdd" />
+	    <parameter name="env.resources" value="resources/uat" />
+	    <parameter name="step.provider.pkg" value="com.qmetry.qaf.example" />
+	    <groups>
+	     <run>
+	      <include name ="login" />
+	     </run>
+	    </groups>
+		<classes>
+			<class name="com.qmetry.qaf.automation.step.client.text.BDDTestFactory"></class>
+		</classes>
+	</test>
+</suite>
